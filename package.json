@@ -5,7 +5,11 @@
   "description": "Scripts for scraping the Heavens Above website.",
   "main": "run.js",
   "scripts": {
-    "start": "node run.js"
+    "start": "node run.js",
+    "lint": "eslint ./src/",
+    "test": "echo \"No tests specified\" && exit 0",
+    "maintenance": "echo \"Running maintenance tasks...\" && exit 0",
+    "build": "echo 'Building the project...' && mkdir -p dist && cp -R public/* dist/"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
