@@ -1,0 +1,11 @@
+name: Scheduled Maintenance
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Every Monday at midnight
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Maintenance Script
+        run: echo "Performing maintenance tasks"

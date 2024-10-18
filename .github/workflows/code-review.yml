@@ -1,0 +1,17 @@
+name: Code Review
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Code Style Check
+        run: npm run lint
+      - name: Security Scan
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript

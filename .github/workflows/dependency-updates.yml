@@ -1,0 +1,11 @@
+name: Dependency Updates
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dependabot/fetch-metadata@v1
+      - uses: dependabot/fetch-pr@v1

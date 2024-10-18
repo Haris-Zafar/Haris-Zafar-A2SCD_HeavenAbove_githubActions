@@ -1,0 +1,13 @@
+name: Generate Release Notes
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate Release Notes
+        run: echo "Generating release notes for new version"
