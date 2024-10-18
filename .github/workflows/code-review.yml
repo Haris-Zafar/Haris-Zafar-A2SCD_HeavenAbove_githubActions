@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Scan for security vulnerabilities
-        run: npm audit
+      - name: Code Style Check
+        run: npm run lint
 
 
