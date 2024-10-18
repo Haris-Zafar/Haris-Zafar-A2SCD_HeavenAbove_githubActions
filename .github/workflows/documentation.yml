@@ -1,5 +1,6 @@
 name: Documentation Deployment
 on:
+  workflow_dispatch: 
   push:
     paths:
       - 'docs/**'
